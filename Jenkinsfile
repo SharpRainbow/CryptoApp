@@ -12,7 +12,7 @@ pipeline {
   }
   post {
         always {
-            archiveArtifacts: 'target/*.exe'
+            archiveArtifacts 'target/*.exe'
         }
     }
 }
