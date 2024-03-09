@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="255.0" minHeight="255.0" minWidth="285.0" prefHeight="255.0" prefWidth="285.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mirea.cryptoapp.MainScreenController">
+   <children>
+      <Button fx:id="replaceCipherBtn" layoutX="74.0" layoutY="41.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="141.0" text="Шифр замены" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" />
+      <Button fx:id="transpCipherBtn" layoutX="70.0" layoutY="106.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="141.0" text="Шифр перестановки" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" />
+   </children>
+</AnchorPane>

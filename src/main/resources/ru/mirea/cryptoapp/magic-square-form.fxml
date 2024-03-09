@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="382.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mirea.cryptoapp.MagicSquareFormController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="375.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Опции">
+            <items>
+                  <CheckMenuItem fx:id="fillSquare" mnemonicParsing="false" text="Заполнять весь квадрат" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="40.0" layoutY="47.0" text="Режим преобразования: " AnchorPane.leftAnchor="35.0" />
+      <TextArea fx:id="inData" layoutX="35.0" layoutY="136.0" prefHeight="45.0" prefWidth="310.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" />
+      <TextArea fx:id="outData" editable="false" layoutX="35.0" layoutY="208.0" prefHeight="45.0" prefWidth="310.0" AnchorPane.bottomAnchor="127.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="208.0" />
+      <Label layoutX="41.0" layoutY="119.0" text="Входные данные" AnchorPane.leftAnchor="40.0" />
+      <Label layoutX="37.0" layoutY="191.0" text="Преобразованные данные" AnchorPane.leftAnchor="40.0" />
+      <Button fx:id="btnTransform" layoutX="125.0" layoutY="275.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="115.0" text="Преобразовать" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="125.0" />
+      <Button fx:id="btnClear" layoutX="125.0" layoutY="327.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="115.0" text="Очистить" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="125.0" />
+      <Label layoutX="35.0" layoutY="88.0" text="Порядок квадрата:" AnchorPane.leftAnchor="35.0" />
+      <TextField fx:id="squareSize" layoutX="153.0" layoutY="85.0" prefHeight="25.0" prefWidth="73.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" />
+      <CheckBox fx:id="autoSize" layoutX="236.0" layoutY="80.0" mnemonicParsing="false" selected="true" text="Определять&#10;автоматически" AnchorPane.rightAnchor="35.0" />
+      <ChoiceBox fx:id="mode" layoutX="188.0" layoutY="43.0" prefWidth="150.0" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="35.0" />
+   </children>
+</AnchorPane>
