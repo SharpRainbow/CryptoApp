@@ -1,7 +1,6 @@
 pipeline {
   agent {
     label "agent2"
-    args "-u root"
   }
   stages {
     stage("Prepare") {
