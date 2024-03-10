@@ -5,8 +5,8 @@ pipeline {
   stages {
     stage("Prepare") {
       steps {
-        sh "apt update"
-        sh "apt install maven -y"
+        sh "apk update"
+        sh "apk add maven"
       }
     }
     stage("Build") {
