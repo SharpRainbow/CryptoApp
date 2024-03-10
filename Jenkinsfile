@@ -1,7 +1,9 @@
 pipeline {
   agent {
-    label "agent2"
-  }
+    docker {
+      image "maven"
+      }
+    }
   stages {
     stage("Prepare") {
       steps {
