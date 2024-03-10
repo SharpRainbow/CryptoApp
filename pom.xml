@@ -105,16 +105,16 @@
                     <executable>${project.basedir}/tools/linux-x64.warp-packer</executable>
                     <arguments>
                         <argument>--arch</argument>
-                        <argument>linux-x64</argument>
+                        <argument>windows-x64</argument>
 
                         <argument>--input_dir</argument>
                         <argument>${project.build.directory}/image</argument>
 
                         <argument>--exec</argument>
-                        <argument>bin/${project.artifactId}</argument>
+                        <argument>bin/${project.artifactId}.bat</argument>
 
                         <argument>--output</argument>
-                        <argument>${project.build.directory}/${project.artifactId}.bin</argument>
+                        <argument>${project.build.directory}/${project.artifactId}.exe</argument>
                     </arguments>
                 </configuration>
             </plugin>
