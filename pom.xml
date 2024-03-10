@@ -88,19 +88,33 @@
                 </executions>
                 <configuration>
                     <!-- obtain warp-packer.exe from: "https://github.com/dgiagio/warp/releases/download/v0.3.0/windows-x64.warp-packer.exe" -->
-                    <executable>${project.basedir}\tools\warp-packer.exe</executable>
+                    <!--<executable>${project.basedir}/tools/warp-packer.exe</executable>
                     <arguments>
-                        <argument>--arch</argument>
+                        <argument>-/-arch</argument>
                         <argument>windows-x64</argument>
 
+                        <argument>-/-input_dir</argument>
+                        <argument>${project.build.directory}/image</argument>
+
+                        <argument>-/-exec</argument>
+                        <argument>bin/${project.artifactId}.bat</argument>
+
+                        <argument>-/-output</argument>
+                        <argument>${project.build.directory}/${project.artifactId}.exe</argument>
+                    </arguments>-->
+                    <executable>${project.basedir}/tools/linux-x64.warp-packer</executable>
+                    <arguments>
+                        <argument>--arch</argument>
+                        <argument>linux-x64</argument>
+
                         <argument>--input_dir</argument>
-                        <argument>${project.build.directory}\image</argument>
+                        <argument>${project.build.directory}/image</argument>
 
                         <argument>--exec</argument>
-                        <argument>bin\${project.artifactId}.bat</argument>
+                        <argument>bin/${project.artifactId}</argument>
 
                         <argument>--output</argument>
-                        <argument>${project.build.directory}\${project.artifactId}.exe</argument>
+                        <argument>${project.build.directory}/${project.artifactId}.bin</argument>
                     </arguments>
                 </configuration>
             </plugin>
