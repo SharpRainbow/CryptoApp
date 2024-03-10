@@ -7,15 +7,13 @@ pipeline {
   stages {
     stage("Prepare") {
       steps {
-        sh "java -version"
         sh "mvn -v"
+        sh "chmod +x ./tools/linux-x64.warp-packer"
       }
     }
     stage("Build") {
       steps {
-        sh "chmod +x ./tools/linux-x64.warp-packer"
         sh "mvn clean package"
-        sh "ls"
       }
     }
   }
