@@ -19,6 +19,7 @@ pipeline {
     stage("Build") {
       steps {
         sh "cd -"
+        sh "chmod +x ./tools/linux-x64.warp-packer"
         sh "mvn clean package"
         sh "ls"
       }
