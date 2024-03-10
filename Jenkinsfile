@@ -8,10 +8,17 @@ pipeline {
       steps {
         sh "apk update"
         sh "apk install maven"
+        sh "cd $JAVA_HOME"
+        sh "apk fetch openjdk17-jmods"
+        sh "tar zxvf openjdk17-jmods*"
+        sh "mv ./usr/lib/jvm/java-17-openjdk/jmods/ ./"
+        sh "rm openjdk"
+        sh "rm -r usr"
       }
     }
     stage("Build") {
       steps {
+        sh "cd -"
         sh "mvn clean package"
         sh "ls"
       }
@@ -19,7 +26,7 @@ pipeline {
   }
   post {
         always {
-            archiveArtifacts 'target/*.exe'
+            archiveArtifacts 'target/*.bin'
         }
     }
 }
