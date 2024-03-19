@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="450.0" maxWidth="600.0" minHeight="450.0" minWidth="600.0" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mirea.cryptoapp.MagmaFormController">
+   <tabs>
+      <Tab closable="false" text="Шифрование текста">
+         <content>
+            <AnchorPane prefHeight="450.0" prefWidth="600.0">
+               <children>
+                  <TextArea fx:id="textIn" layoutX="100.0" layoutY="145.0" prefHeight="80.0" prefWidth="400.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" />
+                  <TextArea fx:id="textOut" editable="false" layoutX="100.0" layoutY="255.0" prefHeight="80.0" prefWidth="400.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" />
+                  <Button fx:id="btnTransformText" layoutX="170.0" layoutY="354.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="105.0" text="Преобразовать" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="325.0" />
+                  <Button fx:id="btnClearText" layoutX="325.0" layoutY="354.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="105.0" text="Очистить" AnchorPane.leftAnchor="325.0" AnchorPane.rightAnchor="170.0" />
+                  <Label layoutX="110.0" layoutY="125.0" text="Входные данные" AnchorPane.leftAnchor="110.0" />
+                  <Label layoutX="110.0" layoutY="235.0" text="Преобразованные данные" AnchorPane.leftAnchor="110.0" />
+                  <Label layoutX="110.0" layoutY="70.0" text="Ключ(256 бит)" AnchorPane.leftAnchor="110.0" />
+                  <TextField fx:id="keyInText" editable="false" layoutX="100.0" layoutY="90.0" prefHeight="25.0" prefWidth="400.0" text="ffeeddccbbaa99887766554433221100f0f1f2f3f4f5f6f7f8f9fafbfcfdfeff" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" />
+                  <ChoiceBox fx:id="cbKeyTypeText" layoutX="320.0" layoutY="34.0" prefWidth="150.0" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="130.0" />
+                  <Label layoutX="320.0" layoutY="14.0" prefWidth="100.0" text="Настройки ключа" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="180.0" />
+                  <Label layoutX="130.0" layoutY="14.0" prefWidth="135.0" text="Режим преобразования" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="335.0" />
+                  <ChoiceBox fx:id="cbModesText" layoutX="130.0" layoutY="34.0" prefWidth="150.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Шифрование файлов">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="110.0" layoutY="174.0" text="Входной файл" AnchorPane.leftAnchor="110.0" />
+                  <Label layoutX="110.0" layoutY="254.0" text="Преобразованный файл" AnchorPane.leftAnchor="110.0" />
+                  <TextField fx:id="inFile" layoutX="110.0" layoutY="194.0" prefHeight="25.0" prefWidth="324.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="166.0" />
+                  <TextField fx:id="outFile" layoutX="110.0" layoutY="274.0" prefHeight="25.0" prefWidth="324.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="166.0" />
+                  <Button fx:id="pickInFile" layoutX="450.0" layoutY="194.0" mnemonicParsing="false" prefWidth="40.0" text="_" AnchorPane.rightAnchor="110.0" />
+                  <Button fx:id="pickOutFile" layoutX="450.0" layoutY="274.0" mnemonicParsing="false" prefWidth="40.0" text="_" AnchorPane.rightAnchor="110.0" />
+                  <Button fx:id="btnTransformFile" layoutX="136.0" layoutY="334.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="128.0" text="Преобразовать" />
+                  <ChoiceBox fx:id="cbModesFile" layoutX="125.0" layoutY="49.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="cbKeyTypeFile" layoutX="328.0" layoutY="49.0" prefWidth="150.0" />
+                  <Label layoutX="125.0" layoutY="29.0" text="Режим преобразования" />
+                  <Label layoutX="328.0" layoutY="29.0" text="Настройки ключа" />
+                  <Label layoutX="110.0" layoutY="94.0" text="Ключ(256 бит)" AnchorPane.leftAnchor="110.0" />
+                  <TextField fx:id="keyInFile" editable="false" layoutX="110.0" layoutY="114.0" prefHeight="25.0" prefWidth="380.0" text="ffeeddccbbaa99887766554433221100f0f1f2f3f4f5f6f7f8f9fafbfcfdfeff" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="110.0" />
+                  <Button fx:id="btnClearFile" layoutX="339.0" layoutY="334.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="128.0" text="Очистить" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</TabPane>

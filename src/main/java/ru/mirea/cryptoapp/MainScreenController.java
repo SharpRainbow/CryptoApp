@@ -23,6 +23,9 @@ public class MainScreenController implements Initializable {
     @FXML
     private Button replaceCipherBtn;
 
+    @FXML
+    private Button symmCipherBtn;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         replaceCipherBtn.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
@@ -95,6 +98,45 @@ public class MainScreenController implements Initializable {
                         }
                     });
                     Stage parentStage = (Stage) transpCipherBtn.getScene().getWindow();
+                    parentStage.close();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        });
+        symmCipherBtn.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                FXMLLoader fxmlLoader = new FXMLLoader(CryptoApplication.class.getResource("magma-form.fxml"));
+                try {
+                    Parent root = fxmlLoader.load();
+                    Scene scene = new Scene(root);
+                    Stage newWindow = new Stage();
+                    newWindow.setTitle("Шифр Магма");
+                    newWindow.setScene(scene);
+                    newWindow.sizeToScene();
+                    newWindow.setResizable(false);
+                    newWindow.show();
+                    newWindow.setMinWidth(newWindow.getWidth());
+                    newWindow.setMinHeight(newWindow.getHeight());
+                    newWindow.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                        @Override
+                        public void handle(WindowEvent windowEvent) {
+                            Stage stage = new Stage();
+                            FXMLLoader loader = new FXMLLoader(CryptoApplication.class.getResource("main-form.fxml"));
+                            Scene scene = null;
+                            try {
+                                scene = new Scene(loader.load());
+                            } catch (IOException e) {
+                                throw new RuntimeException(e);
+                            }
+                            stage.setTitle("Выберите шифр");
+                            stage.setScene(scene);
+                            stage.setResizable(false);
+                            stage.show();
+                        }
+                    });
+                    Stage parentStage = (Stage) symmCipherBtn.getScene().getWindow();
                     parentStage.close();
                 } catch (IOException e) {
                     throw new RuntimeException(e);
